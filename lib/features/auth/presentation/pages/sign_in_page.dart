@@ -53,12 +53,12 @@ class _SignInPageState extends State<SignInPage> {
     }
   }
 
-  void navigateToSignUpPage() => Navigator.popAndPushNamed(
+  void navigateToSignUpPage() => Navigator.pushReplacementNamed(
         context,
         'sign_up_page',
       );
 
-  void navigateToBlogPage() => Navigator.popAndPushNamed(
+  void navigateToBlogPage() => Navigator.pushReplacementNamed(
         context,
         'blog_page',
       );
