@@ -18,8 +18,13 @@ class _BlogPageState extends State<BlogPage> {
   @override
   void initState() {
     super.initState();
-    context.read<BlogBloc>().add(BlogGetAllBlogs());
+    _getAllBlogs();
   }
+
+  void _getAllBlogs() => context.read<BlogBloc>().add(BlogGetAllBlogs());
+
+  void _navigateToAddNewBlogPage() =>
+      Navigator.pushNamed(context, '/add_new_blog_page');
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +33,7 @@ class _BlogPageState extends State<BlogPage> {
         title: Text('Blog App'),
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, 'add_new_blog_page');
-            },
+            onPressed: _navigateToAddNewBlogPage,
             icon: Icon(CupertinoIcons.add_circled),
           ),
         ],
@@ -38,7 +41,7 @@ class _BlogPageState extends State<BlogPage> {
       body: BlocConsumer<BlogBloc, BlogState>(
         listener: (context, state) {
           if (state is BlogUploadBlogSuccess) {
-            context.read<BlogBloc>().add(BlogGetAllBlogs());
+            _getAllBlogs();
           }
         },
         builder: (context, state) {

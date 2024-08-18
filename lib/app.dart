@@ -30,11 +30,11 @@ class _BlogAppState extends State<BlogApp> {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkThemeMode,
       routes: {
-        'sign_up_page': (context) => const SignUpPage(),
-        'sign_in_page': (context) => const SignInPage(),
-        'blog_page': (context) => const BlogPage(),
-        'add_new_blog_page': (context) => const AddNewBlogPage(),
-        'blog_details_page': (context) => const BlogDetailsPage(),
+        '/sign_up_page': (context) => const SignUpPage(),
+        '/sign_in_page': (context) => const SignInPage(),
+        '/blog_page': (context) => const BlogPage(),
+        '/add_new_blog_page': (context) => const AddNewBlogPage(),
+        '/blog_details_page': (context) => const BlogDetailsPage(),
       },
       home: BlocSelector<AppUserCubit, AppUserState, bool>(
         selector: (state) {

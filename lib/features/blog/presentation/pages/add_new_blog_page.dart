@@ -76,20 +76,20 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
             ),
           );
 
-      navigateToBlogPage();
+      _navigateToBlogPage();
     }
   }
 
-  void navigateToBlogPage() => Navigator.pop(context);
+  void _navigateToBlogPage() => Navigator.pop(context);
 
-  void textFieldUnFocus() => FocusScope.of(context).unfocus();
+  void _textFieldUnFocus() => FocusScope.of(context).unfocus();
 
   @override
   Widget build(BuildContext context) {
     final phonePadding = MediaQuery.of(context).padding;
 
     return GestureDetector(
-      onTap: textFieldUnFocus,
+      onTap: _textFieldUnFocus,
       child: Scaffold(
         appBar: AppBar(
           title: Text('Create your post'),
@@ -105,7 +105,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
             if (state is BlogFailure) {
               showSnackBar(context, state.message);
             } else if (state is BlogUploadBlogSuccess) {
-              navigateToBlogPage();
+              _navigateToBlogPage();
             }
           },
           builder: (context, state) {

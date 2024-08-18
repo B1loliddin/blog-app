@@ -53,14 +53,14 @@ class _SignInPageState extends State<SignInPage> {
     }
   }
 
-  void navigateToSignUpPage() => Navigator.pushReplacementNamed(
+  void _navigateToSignUpPage() => Navigator.pushReplacementNamed(
         context,
-        'sign_up_page',
+        '/sign_up_page',
       );
 
-  void navigateToBlogPage() => Navigator.pushReplacementNamed(
+  void _navigateToBlogPage() => Navigator.pushReplacementNamed(
         context,
-        'blog_page',
+        '/blog_page',
       );
 
   void textFieldUnFocus() => FocusScope.of(context).unfocus();
@@ -77,7 +77,7 @@ class _SignInPageState extends State<SignInPage> {
               if (state is AuthFailure) {
                 showSnackBar(context, state.message);
               } else if (state is AuthSuccess) {
-                navigateToBlogPage();
+                _navigateToBlogPage();
               }
             },
             builder: (_, state) {
@@ -115,7 +115,7 @@ class _SignInPageState extends State<SignInPage> {
                           TextSpan(
                             text: 'Sign Up',
                             recognizer: TapGestureRecognizer()
-                              ..onTap = navigateToSignUpPage,
+                              ..onTap = _navigateToSignUpPage,
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium

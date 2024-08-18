@@ -15,12 +15,13 @@ class BlogCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void navigateToBlogDetailsPage() =>
+        Navigator.pushNamed(context, '/blog_details_page', arguments: blog);
+
     return Padding(
       padding: const EdgeInsets.all(16),
       child: GestureDetector(
-        onTap: () {
-          Navigator.pushNamed(context, 'blog_details_page', arguments: blog);
-        },
+        onTap: navigateToBlogDetailsPage,
         child: DecoratedBox(
           decoration: BoxDecoration(
             color: color,

@@ -59,12 +59,12 @@ class _SignUpPageState extends State<SignUpPage> {
 
   void navigateToSignInPage() => Navigator.pushReplacementNamed(
         context,
-        'sign_in_page',
+        '/sign_in_page',
       );
 
   void navigateToBlogPage() => Navigator.pushReplacementNamed(
         context,
-        'blog_page',
+        '/blog_page',
       );
 
   void textFieldUnFocus() => FocusScope.of(context).unfocus();
