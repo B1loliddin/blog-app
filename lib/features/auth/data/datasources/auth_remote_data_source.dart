@@ -6,17 +6,26 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 abstract interface class AuthRemoteDataSource {
   Session? get currentUserSession;
 
+  /// The function [signUp] is used to signUp the user into an application,
+  /// using credentials like [name], [email] and [password] as well.
+  /// If something goes wrong, it throws a [ServerException] error.
   Future<UserModel> signUp({
     required String name,
     required String email,
     required String password,
   });
 
+  /// The function [signIn] is used to signIn the user into an application,
+  /// using credentials like [email] and [password].
+  /// If something goes wrong, it throws a [ServerException] error.
   Future<UserModel> signIn({
     required String email,
     required String password,
   });
 
+  /// The function [getCurrentUserData] is used to get information like [id], [name] and [email]
+  /// about current user. If user does not exist in the database, it throws
+  /// [ServerException] error.
   Future<UserModel?> getCurrentUserData();
 }
 
