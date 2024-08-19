@@ -19,6 +19,7 @@ Blog app have been created to create some blogs of people.
 - Get image from gallery
 - Categories
 - Detail page(read time)
+- Internet connection checking
 
 ## Screenshots
 
