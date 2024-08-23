@@ -30,11 +30,11 @@ class _BlogPageState extends State<BlogPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Blog App'),
+        title: const Text('Blog App'),
         actions: [
           IconButton(
             onPressed: _navigateToAddNewBlogPage,
-            icon: Icon(CupertinoIcons.add_circled),
+            icon: const Icon(CupertinoIcons.add_circled),
           ),
         ],
       ),
@@ -46,7 +46,7 @@ class _BlogPageState extends State<BlogPage> {
         },
         builder: (context, state) {
           if (state is BlogLoading) {
-            return Loading();
+            return const Loading();
           } else if (state is BlogGetAllBlogsSuccess) {
             return ListView.builder(
               itemCount: state.blogs.length,
@@ -65,7 +65,7 @@ class _BlogPageState extends State<BlogPage> {
             );
           }
 
-          return SizedBox();
+          return const SizedBox();
         },
       ),
     );

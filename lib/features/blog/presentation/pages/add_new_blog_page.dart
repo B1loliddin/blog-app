@@ -92,11 +92,11 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
       onTap: _textFieldUnFocus,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Create your post'),
+          title: const Text('Create your post'),
           actions: [
             IconButton(
               onPressed: _uploadBlog,
-              icon: Icon(Icons.done_rounded),
+              icon: const Icon(Icons.done_rounded),
             ),
           ],
         ),
@@ -110,7 +110,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
           },
           builder: (context, state) {
             if (state is BlogLoading) {
-              return Loading();
+              return const Loading();
             }
 
             return SingleChildScrollView(
@@ -128,7 +128,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
                                 width: MediaQuery.sizeOf(context).width,
                                 child: ClipRRect(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
+                                      const BorderRadius.all(Radius.circular(10)),
                                   child: Image.file(image!, fit: BoxFit.cover),
                                 ),
                               ),
@@ -139,15 +139,15 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
                             child: GestureDetector(
                               onTap: _selectImage,
                               child: DottedBorder(
-                                dashPattern: [15, 4],
+                                dashPattern: const [15, 4],
                                 color: AppPallet.borderColor,
-                                radius: Radius.circular(10),
+                                radius: const Radius.circular(10),
                                 borderType: BorderType.RRect,
                                 strokeCap: StrokeCap.round,
                                 child: SizedBox(
                                   height: 150,
                                   width: MediaQuery.sizeOf(context).width,
-                                  child: Column(
+                                  child: const Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(Icons.folder_open, size: 40),
@@ -162,7 +162,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
                               ),
                             ),
                           ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -180,7 +180,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
                                 setState(() {});
                               },
                               child: TweenAnimationBuilder<Color?>(
-                                duration: Duration(milliseconds: 250),
+                                duration: const Duration(milliseconds: 250),
                                 tween: ColorTween(
                                   begin: AppPallet.backgroundColor,
                                   end: selectedTopics.contains(element)
@@ -204,7 +204,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
                         }).toList(),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Column(
@@ -213,7 +213,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
                             controller: _titleController,
                             hintText: 'Blog Title',
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           BlogEditor(
                             controller: _contentController,
                             hintText: 'Blog Content',

@@ -17,7 +17,7 @@ class BlogDetailsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Details Page'),
+        title: const Text('Details Page'),
       ),
       body: Scrollbar(
         child: Padding(
@@ -28,25 +28,25 @@ class BlogDetailsPage extends StatelessWidget {
               children: [
                 Text(
                   blog.title,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   'By ${blog.userName}',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   '${formatDateByDMMMYYYY(blog.updatedAt)}. Reading time: ${calculateReadingTime(blog.content)} min',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     color: AppPallet.greyColor,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                   child: FadeInImage.memoryNetwork(
                     placeholder: kTransparentImage,
                     image: blog.imageUrl,
@@ -55,10 +55,10 @@ class BlogDetailsPage extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   blog.content,
-                  style: TextStyle(fontSize: 16, height: 2),
+                  style: const TextStyle(fontSize: 16, height: 2),
                 ),
               ],
             ),

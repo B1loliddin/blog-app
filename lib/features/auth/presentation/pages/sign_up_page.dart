@@ -75,7 +75,7 @@ class _SignUpPageState extends State<SignUpPage> {
       onTap: textFieldUnFocus,
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: BlocConsumer<AuthBloc, AuthState>(
             listener: (_, state) {
               if (state is AuthFailure) {
@@ -86,7 +86,7 @@ class _SignUpPageState extends State<SignUpPage> {
             },
             builder: (_, state) {
               if (state is AuthLoading) {
-                return Loading();
+                return const Loading();
               }
 
               return Form(
@@ -94,29 +94,29 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Sign Up',
                       style: TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     AuthField(hintText: 'Name', controller: _nameController),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     AuthField(hintText: 'Email', controller: _emailController),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     AuthField(
                       hintText: 'Password',
                       controller: _passwordController,
                       isObscureText: true,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     AuthGradientButton(
                       buttonText: 'Sign Up',
                       onPressed: _onSignUpButtonPressed,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     RichText(
                       text: TextSpan(
                         text: 'Already have an account? ',

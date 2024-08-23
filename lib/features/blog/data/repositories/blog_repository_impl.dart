@@ -36,7 +36,7 @@ class BlogRepositoryImpl implements BlogRepository {
       }
 
       BlogModel blog = BlogModel(
-        id: Uuid().v1(),
+        id: const Uuid().v1(),
         updatedAt: DateTime.now(),
         blogId: blogId,
         title: title,

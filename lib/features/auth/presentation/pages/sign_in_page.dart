@@ -71,7 +71,7 @@ class _SignInPageState extends State<SignInPage> {
       onTap: textFieldUnFocus,
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: BlocConsumer<AuthBloc, AuthState>(
             listener: (_, state) {
               if (state is AuthFailure) {
@@ -82,31 +82,31 @@ class _SignInPageState extends State<SignInPage> {
             },
             builder: (_, state) {
               if (state is AuthLoading) {
-                return Loading();
+                return const Loading();
               }
               return Form(
                 key: formKey,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Sign In',
                       style: TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     AuthField(hintText: 'Email', controller: _emailController),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     AuthField(
                         hintText: 'Password', controller: _passwordController),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     AuthGradientButton(
                       buttonText: 'Sign In',
                       onPressed: _onSignInButtonPressed,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     RichText(
                       text: TextSpan(
                         text: 'Don\'t have an account? ',

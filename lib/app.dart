@@ -42,7 +42,7 @@ class _BlogAppState extends State<BlogApp> {
         },
         builder: (_, isSignedIn) {
           if (isSignedIn) {
-            return BlogPage();
+            return const BlogPage();
           }
 
           return const SignInPage();

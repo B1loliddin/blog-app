@@ -7,7 +7,7 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
       backgroundColor: AppPallet.backgroundColor,
     ),
-    chipTheme: ChipThemeData(
+    chipTheme: const ChipThemeData(
       color: WidgetStatePropertyAll<Color>(AppPallet.backgroundColor),
       side: BorderSide.none,
     ),

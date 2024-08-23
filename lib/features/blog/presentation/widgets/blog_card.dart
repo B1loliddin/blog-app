@@ -25,7 +25,7 @@ class BlogCard extends StatelessWidget {
         child: DecoratedBox(
           decoration: BoxDecoration(
             color: color,
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
           child: SizedBox(
             height: 200,
@@ -51,11 +51,11 @@ class BlogCard extends StatelessWidget {
                                         left: i == 0 ? 16 : 8,
                                       ),
                                       child: Chip(
-                                        color: WidgetStatePropertyAll(
+                                        color: const WidgetStatePropertyAll(
                                           AppPallet.backgroundColor,
                                         ),
                                         label: Text(blog.topics[i].toString()),
-                                        side: BorderSide(),
+                                        side: const BorderSide(),
                                       ),
                                     ),
                                 ],
@@ -64,12 +64,12 @@ class BlogCard extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Padding(
                         padding: const EdgeInsets.only(left: 16),
                         child: Text(
                           blog.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
                           ),
