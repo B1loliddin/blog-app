@@ -3,6 +3,8 @@
 Blog app have been created to create some blogs of people.
 [reference link](https://www.youtube.com/watch?v=ELFORM9fmss&list=PLlzmAWV2yTgCjoZNF3hLX3puYJir9vSQO)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/85a7ec01d8d14695a5514c64745807a3)](https://app.codacy.com/gh/B1loliddin/blog-app/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 ## Table of Contents
 
 - [Features](#features)
